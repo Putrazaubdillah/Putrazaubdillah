@@ -7,6 +7,14 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug token
+  run: |
+    if [ -z "${{ secrets.METRICS_TOKEN }}" ]; then
+      echo "TOKEN KOSONG"
+      exit 1
+    else
+      echo "TOKEN ADA"
+    fi
       - uses: lowlighter/metrics@latest
         with:
           user: Putrazubdillah
