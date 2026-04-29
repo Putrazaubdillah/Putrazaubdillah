@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          user: YOUR_USERNAME
+          user: Putrazubdillah
           token: ${{ secrets.METRICS_TOKEN }}
